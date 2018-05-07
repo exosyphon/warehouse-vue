@@ -7,7 +7,13 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "vue": "^2.5.16"
+    "axios": "^0.18.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "vue": "^2.5.16",
+    "vue-material": "^1.0.0-beta-8",
+    "vuex": "^3.0.1",
+    "vuex-saga": "^0.1.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.9",
