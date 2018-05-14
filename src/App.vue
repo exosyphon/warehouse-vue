@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Warehouses from './components/Warehouses.vue'
+import Warehouses from './components/warehouses.vue'
 
 export default {
   name: 'app',

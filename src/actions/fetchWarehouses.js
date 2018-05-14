@@ -1,4 +1,4 @@
-import { callFetchApi } from "../shared/api";
+import { callFetchApi } from "../utils/shared/api";
 import {call} from 'vuex-saga';
 import * as constants from '../utils/shared/constants';
 
