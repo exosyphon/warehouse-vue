@@ -1,6 +1,16 @@
 {
   "presets": [
-    "@vue/app"
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
   ],
-  "plugins": ["transform-regenerator"]
+  "plugins": [
+    "transform-regenerator",
+    "@babel/plugin-proposal-object-rest-spread"
+  ]
 }

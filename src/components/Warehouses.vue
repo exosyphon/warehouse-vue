@@ -15,6 +15,9 @@ export default {
       ...mapSagas({
         fetchWarehouses: "fetchWarehouses"
       })
+      // fetchWarehouses: (payload) => {
+      //   return this.$run(fetchWarehouses, payload);
+      // }
     },
   computed: {
     warehouses() {
