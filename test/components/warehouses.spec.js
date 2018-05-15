@@ -1,25 +1,24 @@
 import { shallow, createLocalVue } from 'vue-test-utils'
 import Warehouses from '../../src/components/warehouses'
 import Vuex from 'vuex'
-import VuexSaga from 'vuex-saga'
 
 describe('Warehouses', () => {
   let wrapper
 
   beforeEach(() => {
     const localVue = createLocalVue()
-
     localVue.use(Vuex)
     
     const state = {
       warehouses: [{id: 1, name: 'tom'}]
     }
     const actions = {
-      fetchWarehouses: jest.fn(),
+      FETCH_WAREHOUSES: jest.fn(),
     }
-    const store = new Vuex.Store({state, actions})
-
-    localVue.use(VuexSaga, {store})
+    const getters = {
+      getWarehouses: state => state.warehouses
+    }
+    const store = new Vuex.Store({state, actions, getters})
 
     wrapper = shallow(Warehouses, {store, localVue})
   })

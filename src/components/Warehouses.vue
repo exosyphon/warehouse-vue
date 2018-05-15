@@ -7,24 +7,15 @@
 </template>
 
 <script>
-import { mapSagas } from 'vuex-saga';
+import { mapGetters } from 'vuex';
 
 export default {
   name: "Warehouses",
-  methods: {
-      ...mapSagas({
-        fetchWarehouses: "fetchWarehouses"
-      })
-    },
-  computed: {
-    warehouses() {
-      return this.$store.state.warehouses;
-    }
-  },
+  computed: mapGetters({
+    warehouses: 'getWarehouses'
+  }),
   created() {
-    this.fetchWarehouses().then(res => {
-      this.$store.state.warehouses = res;
-    });
+    this.$store.dispatch('FETCH_WAREHOUSES')
   }
 };
 </script>
