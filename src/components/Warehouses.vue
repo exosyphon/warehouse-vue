@@ -1,6 +1,6 @@
 <template>
-  <ul>
-    <li v-for="warehouse in warehouses" :key="warehouse.id">
+  <ul class="warehouses">
+    <li class="warehouse" v-for="warehouse in warehouses" :key="warehouse.id">
       {{warehouse.name}}
     </li>
   </ul>
@@ -15,9 +15,6 @@ export default {
       ...mapSagas({
         fetchWarehouses: "fetchWarehouses"
       })
-      // fetchWarehouses: (payload) => {
-      //   return this.$run(fetchWarehouses, payload);
-      // }
     },
   computed: {
     warehouses() {
